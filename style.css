@@ -1,3 +1,16 @@
 body{
-    background-color: aquamarine;
+    margin:0;
+}
+#main_container{
+    background-color: dimgray;
+    width: 70%;
+    height: 100%;
+    margin-left: 15%;
+}
+
+@media only screen and (max-width: 1919px) {
+    #main_container{
+    width: 100%;
+    margin-left: 0;
+    }
 }
