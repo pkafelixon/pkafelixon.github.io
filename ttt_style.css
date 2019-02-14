@@ -1,57 +1,4 @@
 @import url('https://fonts.googleapis.com/css?family=Roboto:400,500');
-body {
-    font-family: 'Roboto', sans-serif;
-    margin: 0;
-}
-
-#main_container {
-    height: 300%;
-    width: 100%;
-    margin-left: 0;
-}
-
-#sticky {
-    position: relative;
-    top: 0px;
-    background-color: #fff;
-    height: 80px;
-    padding: 3%;
-    box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 3px 1px -2px rgba(0, 0, 0, 0.12), 0 1px 5px 0 rgba(0, 0, 0, 0.20);
-}
-
-#logo {
-    position: relative;
-    border-right-style: none;
-    box-shadow: 0 3px 4px 0 rgba(0, 0, 0, 0.14), 0 3px 3px -2px rgba(0, 0, 0, 0.12), 0 1px 8px 0 rgba(0, 0, 0, 0.20);
-    border-radius: 90px;
-    background-color: #d81b60;
-    height: 80px;
-    width: 80px;
-    float: left;
-}
-
-#nav {
-    /* box-shadow: 0 1px 1px 0 rgba(0,0,0,0.14), 0 2px 1px -1px rgba(0,0,0,0.12), 0 1px 3px 0 rgba(0,0,0,0.20);
-    border-radius: 5px;
-    border: 1px solid #DFE1E5; */
-    font-size: 200%;
-    text-align: center;
-    position: relative;
-    float: right;
-    height: 40px;
-    width: auto;
-    margin: 20px 20px 20px 0;
-}
-
-a {
-    text-decoration: none;
-    color: inherit;
-}
-
-#container {
-    padding: 50px 100px 0 100px;
-}
-
 #general {
     margin: 0px;
     padding-left: 40%;
@@ -139,5 +86,3 @@ a {
     font-size: 36px;
     font-weight: 400;
 }
-
-@media screen and (max-width: 71em) {}
