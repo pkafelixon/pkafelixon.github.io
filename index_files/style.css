@@ -50,11 +50,11 @@ a {
 
 .kafle {
     position: relative;
-    margin: 5px;
+    margin: 10px;
     box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 3px 1px -2px rgba(0, 0, 0, 0.12), 0 1px 5px 0 rgba(0, 0, 0, 0.20);
-    height: 60px;
-    border-radius: 10px;
-    width: 60px;
+    height: 120px;
+    border-radius: 20px;
+    width: 120px;
     float: left;
     background-color: #efebe9;
 }
@@ -66,35 +66,35 @@ a {
 }
 
 #motyw {
-    padding-top: 5px;
+    padding-top: 10px;
     padding-bottom: 0px;
-    height: 30px;
-    width: 200px;
+    height: 60px;
+    width: 400px;
     clear: both;
     text-align: center;
 }
 
 #restart {
     height: auto;
-    padding: 10px;
-    width: 180px;
+    padding: 20px;
+    width: 360px;
     clear: both;
 }
 
 #textbox {
     background-color: #efebe9;
-    height: 43px;
-    padding: 10px;
-    width: 180px;
+    height: 72px;
+    padding: 10px 20px 30px 20px;
+    width: 360px;
     text-align: center;
-    font-size: 36px;
+    font-size: 72px;
     font-weight: 500;
 }
 
 #p_reset {
     margin: 0;
     text-align: center;
-    font-size: 36px;
+    font-size: 72px;
     font-weight: 500;
 }
 
@@ -102,14 +102,14 @@ a {
     background-color: #efebe9;
     padding: 0;
     box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 3px 1px -2px rgba(0, 0, 0, 0.12), 0 1px 5px 0 rgba(0, 0, 0, 0.20);
-    width: 99px;
-    height: 63px;
+    width: 198px;
+    height: 112px;
     border-style: none;
-    border-radius: 10px 0 0 10px;
-    margin: -10 1 0 -10;
+    border-radius: 20px 0 0 20px;
+    margin: -10 2 0 -20;
     text-align: center;
     display: inline-block;
-    font-size: 36px;
+    font-size: 72px;
     font-weight: 400;
 }
 
@@ -118,14 +118,14 @@ a {
     float: right;
     padding: 0;
     box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 3px 1px -2px rgba(0, 0, 0, 0.12), 0 1px 5px 0 rgba(0, 0, 0, 0.20);
-    width: 99px;
-    height: 63px;
+    width: 198px;
+    height: 112px;
     border-style: none;
-    border-radius: 0 10px 10px 0;
-    margin: -10 -10 0 1;
+    border-radius: 0 20px 20px 0;
+    margin: -10 -20 0 2;
     text-align: center;
     display: inline-block;
-    font-size: 36px;
+    font-size: 72px;
     font-weight: 400;
 }
 
