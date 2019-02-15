@@ -48,18 +48,6 @@ a {
     color: inherit;
 }
 
-#container {
-    padding: 50px 100px 0 100px;
-}
-
-#general {
-    margin: 0px;
-    padding-left: 40%;
-    background-color: #fff;
-    padding-top: 25%;
-    height: 0;
-}
-
 .kafle {
     position: relative;
     margin: 5px;
