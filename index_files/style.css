@@ -48,6 +48,10 @@ a {
     color: inherit;
 }
 
+#container__mainpage {
+    margin:0 12% 0 12%;
+}
+
 .kafle {
     position: relative;
     margin: 10px;
