@@ -7,14 +7,17 @@ body {
     margin: 0;
 }
 
-#main_container {
-    height: 300%;
-    width: 100%;
-    margin-left: 0;
+.dark_theme {
+    color: #fff;
+    background-color: #616161;
+}
+
+.light_theme {
+    color:#000;
+    background-color: #fff;
 }
 
 #sticky {
-    background-color: #ffffff;
     text-align: center;
     font-size: 200%;
     top: 0px;
@@ -37,12 +40,13 @@ a {
     color: inherit;
 }
 
-#container__mainpage {
+#main_container {
     margin: 1.5% 12% 1.5% 12%;
     padding: 40px;
     text-indent: 20px;
-    background-color: #fff;
 }
+
+/* tictactoe */
 
 .kafle {
     color: #17252a;
@@ -125,5 +129,7 @@ a {
     font-size: 72px;
     font-weight: 400;
 }
+
+/* //tictactoe// */
 
 @media screen and (max-width: 71em) {}
