@@ -13,7 +13,7 @@ body {
 }
 
 .light_theme {
-    color:#000;
+    color: #000;
     background-color: #fff;
 }
 
@@ -131,5 +131,14 @@ a {
 }
 
 /* //tictactoe// */
+
+.pixele {
+    color: #17252a;
+    position: relative;
+    height: 1em;
+    width: 1em;
+    float: left;
+    background-color: #fff;
+}
 
 @media screen and (max-width: 71em) {}
