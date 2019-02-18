@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css?family=Roboto:400,500');
+
 body {
     position: relative;
     color: #000;
@@ -7,11 +8,11 @@ body {
     margin: 0;
 }
 
-#color_changer{
+#color_changer {
     box-shadow: 0 3px 4px 0 rgba(0, 0, 0, 0.14),
-    0 3px 3px -2px rgba(0, 0, 0, 0.12),
-    0 1px 8px 0 rgba(0, 0, 0, 0.20);
-    top:200px;
+        0 3px 3px -2px rgba(0, 0, 0, 0.12),
+        0 1px 8px 0 rgba(0, 0, 0, 0.20);
+    top: 200px;
     position: fixed;
     z-index: +2;
     background-color: #616161;
@@ -67,7 +68,7 @@ a {
     width: 8vw;
     float: left;
     background-color: #def2f1;
-    font-size: 6vw;
+    font-size: 4.5vw;
 }
 
 #d1,
@@ -87,19 +88,19 @@ a {
 
 #textbox {
     background-color: #def2f1;
-    height: 6vw;
-    padding: .5vw 1vw 1.5vw 1vw;
+    height: 5vw;
+    padding: 1vw;
     width: 24vw;
     text-align: center;
     font-weight: 500;
 }
 
 .b_kafle {
-    font-size: 6vw;
+    font-size: 4.5vw;
     background-color: #def2f1;
     padding: 0;
     width: 13vw;
-    height: 8vw;
+    height: 7vw;
     border-style: none;
     text-align: center;
     display: inline-block;
@@ -110,16 +111,21 @@ a {
     border-right-style: solid;
     border-color: #000;
     border-radius: 20px 0 0 20px;
-    margin: -.5vw 0 0 -1.1vw;
+    margin: -1vw 0 0 -1.1vw;
 }
 
 #b2 {
     float: right;
     border-radius: 0 20px 20px 0;
-    margin: -.5vw -1vw 0 0;
+    margin: -1vw -1vw 0 0;
 }
-#ttt{
-    padding: 4vw 35vw 0 35vw
+
+#ttt {
+    padding: 3.5vw 35vw 0 35vw
+}
+#pole{
+    height: 8vw;
+    width: 8vw;
 }
 /* //tictactoe// */
 
@@ -133,7 +139,30 @@ a {
 }
 
 @media screen and (max-width: 71em) {
-    #ttt{
-        
+    #ttt {
+        padding: 8vw;
+
+    }
+
+    #textbox {
+        height: 15vw;
+        padding: 3vw;
+        width: 72vw;
+    }
+
+    .kafle {
+        margin: 1.5vw;
+        height: 24vw;
+        border-radius: 20px;
+        width: 24vw;
+        font-size: 13.5vw;
+    }
+    #restart {
+        padding: 3vw;
+        width: 72vw;
+    }
+    #pole {
+        height: 24vw;
+        width: 24vw;
     }
 }
