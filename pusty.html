@@ -1,9 +1,25 @@
-<?php include $_SERVER['DOCUMENT_ROOT'].'/head.php'; ?>
-<html>
+<!doctype html>
+<html lang="pl">
+
 <head>
-    <title>Kolko i krzyzyk</title>
+    <title>pusty</title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="./index_files/style_light.css">
+    <script type="text/javascript" src="./index_files/theme.js"></script>
 </head>
+
 <body>
+    <div id="color_changer" onclick="Theme()">
+    </div>
+    <header id="sticky" class="theme">
+        <nav style="height:40px; ">
+            <a id="f_left" href="./index.php">Kafelixon</a>
+            <a href="./ttt_v0.10.php" id="f_right">XO</a>
+            <a href="./pusty.php" id="f_right">Test</a>
+            <!-- <a href="./pusty.php" id="f_right">Empty</a>
+            <a href="https://pkafelixon.github.io/#" id="f_right">Empty</a> -->
+        </nav>
+    </header>
     <div id="container" style="padding:70px;">
         <script>
         var width = (parent.innerWidth / 10);
@@ -19,10 +35,11 @@
             div.setAttribute("onmouseenter", "kolor(this.id)")
             document.getElementById("container").appendChild(div);
         }
+
         function kolor(id) {
             document.getElementById(id).style.backgroundColor = "#ff0bdf";
         }
-        for (var i = width-16; i < sum; i += width-16) {
+        for (var i = width - 16; i < sum; i += width - 16) {
             document.getElementById("p" + i).style.clear = "both";
         }
         </script>
