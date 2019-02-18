@@ -165,4 +165,18 @@ a {
         height: 24vw;
         width: 24vw;
     }
+    .b_kafle {
+        font-size: 13.5vw;
+        width: 39vw;
+        height: 21vw;
+    }
+
+    #b1 {
+        margin: -3vw 0 0 -3.3vw;
+    }
+
+    #b2 {
+        margin: -3vw -3vw 0 0;
+    }
+
 }
