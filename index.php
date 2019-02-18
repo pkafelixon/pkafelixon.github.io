@@ -1,35 +1,9 @@
-<!-- saved from url=(0029)https://pkafelixon.github.io/ -->
+<?php include $_SERVER['DOCUMENT_ROOT'].'/head.php'; ?>
 <html>
-
-<head>
-    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-
-    <title>Main Page</title>
-    <link rel="stylesheet" href="./index_files/style.css">
-    <script type="text/javascript" src="./index_files/main.js"></script>
-</head>
+<head><title>Main Page</title></head>
 
 <body>
-    <header id="sticky" class="light_theme">
-        <nav>
-            <a href="https://pkafelixon.github.io/index.html">
-                <div id="f_left">Kafelixon</div>
-            </a>
-            <a href="https://pkafelixon.github.io/index_files/ttt_v0.10.html">
-                <div id="f_right">XO</div>
-            </a>
-            <a href="https://pkafelixon.github.io/index_files/pusty.html">
-                <div id="f_right">Empty</div>
-            </a>
-            <!-- <a href="https://pkafelixon.github.io/#"> -->
-            <div id="f_right" onclick="dark_theme()">Empty</div>
-            <!-- </a> -->
-            <a href="https://pkafelixon.github.io/#">
-                <div id="f_right">Empty</div>
-            </a>
-        </nav>
-    </header>
-    <article id="main_container" class="light_theme">
+    <article id="main_container" class="theme">
         <header>
             <h1>Sample Header</h1>
         </header>
@@ -242,3 +216,4 @@ https://www.sessions.edu/color-calculator/-->
 </body>
 
 </html>
+<?php include $_SERVER['DOCUMENT_ROOT'].'/foot.php'; ?>
