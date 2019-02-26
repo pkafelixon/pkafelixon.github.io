@@ -5,47 +5,6 @@ canvas.height = window.innerHeight;
 
 var c = canvas.getContext("2d");
 
-// c.fillRect(x,y,width,height);
-// c.fillStyle = "#ff0000";
-// c.fillRect(100, 100, 100, 100);
-// c.fillStyle = "#00ff00";
-// c.fillRect(300, 400, 100, 100);
-// c.fillStyle = "#0000ff";
-// c.fillRect(200, 200, 100, 100);
-// console.log(canvas);
-
-// //Line
-// c.beginPath();
-// // c.moveTo(x,y)
-// c.moveTo(50, 300);
-// c.lineTo(300, 100);
-// c.lineTo(400, 300);
-// c.strokeStyle = "#f23a23";
-// c.stroke();
-
-// c.beginPath()
-// c.arc(300, 300, 30, 0, Math.PI * 2, false)
-// c.strokeStyle = "purple"
-// c.stroke()
-
-// for (let i = 0; i < 20; i++) {
-//     var x = Math.random() * window.innerWidth;
-//     var y = Math.random() * window.innerHeight;
-//     var losowy = "rgb(" + Math.floor(Math.random() * 255) + ", " + Math.floor(Math.random() * 255) + ", " + Math.floor(Math.random() * 255) + ")";
-//     c.beginPath()
-//     c.arc(x, y, 30, 0, Math.PI * 2, false)
-//     c.strokeStyle = losowy
-//     c.stroke()
-// }
-// , dx, dy, radius
-
-
-// var x = Math.random() * innerWidth;
-// var y = Math.random() * innerHeight;
-// var dx = (Math.random() - 0.5) * 10;
-// var dy = (Math.random() - 0.5) * 10;
-// var radius = 30;
-
 var mouse = {
     x: undefined,
     y: undefined
