@@ -99,8 +99,7 @@ a {
     font-size: 4.5vw;
     background-color: #def2f1;
     padding: 0;
-    width: 13vw;
-    height: 7vw;
+    width: 12vw;
     border-style: none;
     text-align: center;
     display: inline-block;
@@ -111,13 +110,12 @@ a {
     border-right-style: solid;
     border-color: #000;
     border-radius: 20px 0 0 20px;
-    margin: -1vw 0 0 -1.1vw;
+    float: left;
 }
 
 #b2 {
     float: right;
     border-radius: 0 20px 20px 0;
-    margin: -1vw -1vw 0 0;
 }
 
 #ttt {
@@ -167,16 +165,6 @@ a {
     }
     .b_kafle {
         font-size: 13.5vw;
-        width: 39vw;
-        height: 21vw;
+        width: 36vw;
     }
-gabrysia to debski XD
-    #b1 {
-        margin: -3vw 0 0 -3.3vw;
-    }
-
-    #b2 {
-        margin: -3vw -3vw 0 0;
-    }
-
-}
+/* gabrysia to debski XD */
