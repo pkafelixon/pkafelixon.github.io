@@ -6,6 +6,9 @@ body {
     font-family: 'Roboto', sans-serif;
     margin: 0;
 }
+body:hover{
+    cursor: pointer;
+}
 
 #color_changer {
     box-shadow: 0 3px 4px 0 rgba(0, 0, 0, 0.14),

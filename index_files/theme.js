@@ -4,11 +4,11 @@ var dark = 0;
 
 function Theme() {
   if (dark == 0) {
-    changeCSS("index_files/style_dark.css", 0);
+    changeCSS("index_files/dark.css", 0);
     general_color = "#616161";
     dark = 1;
   } else {
-    changeCSS("index_files/style_light.css", 0);
+    changeCSS("index_files/light.css", 0);
     general_color = "#def2f1";
     dark = 0;
   }
