@@ -25,3 +25,14 @@ function changeCSS(cssFile, cssLinkIndex) {
 
     document.getElementsByTagName("head").item(0).replaceChild(newlink, oldlink);
 }
+
+var prevScrollpos = window.pageYOffset;
+window.onscroll = function() {
+  var currentScrollPos = window.pageYOffset;
+  if (prevScrollpos > currentScrollPos) {
+    document.getElementById("sticky").style.bottom = "0";
+  } else {
+    document.getElementById("sticky").style.bottom = "-70px";
+  }
+  prevScrollpos = currentScrollPos;
+}

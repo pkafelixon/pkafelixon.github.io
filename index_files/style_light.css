@@ -27,13 +27,15 @@ body {
 }
 
 #sticky {
-    position: sticky;
+    width:100%;
+    position: fixed;
     text-align: center;
     font-size: 200%;
-    top: 0px;
-    box-shadow: 0 3px 4px 0 rgba(0, 0, 0, 0.14), 0 3px 3px -2px rgba(0, 0, 0, 0.12), 0 1px 8px 0 rgba(0, 0, 0, 0.20);
+    bottom: 0%;
+    box-shadow: 0 -2px 4px 1px rgba(0, 0, 0, 0.14);
     padding: 15px 15px 15px 0;
     text-indent: 20px;
+    transition: bottom 0.3s;
 }
 
 #f_left {
