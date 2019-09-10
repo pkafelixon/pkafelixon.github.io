@@ -1,8 +1,8 @@
-:root{
-    --body-bg-colour:#7dd3b9;
-    --main-fg-colour:#fff; 
-    --main-bg-colour: #616161;
-    --kafle-fg-colour:#fff;
-    --kafle-bg-colour:#616161;
-    --colour-changer-button:#fff;
+:root {
+  --body-bg-colour: #7dd3b9;
+  --main-fg-colour: #fff;
+  --main-bg-colour: #616161;
+  --kafle-fg-colour: #fff;
+  --kafle-bg-colour: #616161;
+  --colour-changer-button: #fff;
 }
