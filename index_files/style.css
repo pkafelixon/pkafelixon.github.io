@@ -123,10 +123,12 @@ a {
 #ttt {
   padding: 3.5vw 35vw 0 35vw;
 }
+
 #pole {
   height: 8vw;
   width: 8vw;
 }
+
 /* //tictactoe// */
 
 .pixele {
@@ -137,26 +139,25 @@ a {
   float: left;
   background-color: var(--main-bg-colour);
 }
+
 /* szachy */
-.szachy_dark {
-  color: var(--szafy-fg-colour);
-  position: relative;
-  background-color: #582d1b;
-  height: 8vw;
-  width: 8vw;
-  float: left;
-  font-size: 4.5vw;
-}
-.szachy_light {
-  color: var(--szafy-fg-colour);
-  background-color: rgb(246, 221, 172);
+.szachy {
   position: relative;
   height: 8vw;
   width: 8vw;
   float: left;
   font-size: 4.5vw;
 }
-.cb{
+
+.dark_tile {
+  background-color: var(--szafy-bg-colour);
+}
+
+.light_tile {
+  background-color: var(--szafy-fg-colour);
+}
+
+.cb {
   clear: both;
 }
 
@@ -180,14 +181,17 @@ a {
     width: 24vw;
     font-size: 13.5vw;
   }
+
   #restart {
     padding: 3vw;
     width: 72vw;
   }
+
   #pole {
     height: 24vw;
     width: 24vw;
   }
+
   .b_kafle {
     font-size: 13.5vw;
     width: 36vw;

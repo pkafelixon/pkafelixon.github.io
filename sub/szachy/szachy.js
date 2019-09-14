@@ -1,123 +1,172 @@
+//0=pawn 1=rook 2=knight 3=bishop 4=queen 5=king
+wMoves = [[+10], [+1, +2, +3, +4, +5]];
+bMoves = [[-10]];
+var d = document;
+
 class Piece {
-    constructor(id, type, colour) {
-        this.id = id;
-        this.type = type;
-        this.colour = colour;
-        this.draw = function () {
-            document.getElementById(this.id).innerHTML =
-                '<img src="./' + this.type + "_" + this.colour + '.png" height="100%">';
-        };
-        this.move = newId => {
-            document.getElementById(this.id).innerHTML = "";
-            this.id = newId;
-            document.getElementById(this.id).innerHTML =
-                '<img src="./' + this.type + "_" + this.colour + '.png" height="100%">';
-        };
-        this.select = function () {
-            if (
-                document.getElementById(this.id).style.backgroundColor ==
-                "rgb(173, 216, 230)"
-            ) {
-                document.getElementById(this.id).style = previousColor;
-            } else {
-                var previousColor = document.getElementById(this.id).style
-                    .backgroundColor;
-                document.getElementById(this.id).style = "background-color:#add8e6;";
-            }
-        };
-    }
+  constructor(id, type, number, colour) {
+    this.id = id;
+    this.type = type;
+    this.number = number;
+    this.colour = colour;
+    this.draw = function() {
+      d.getElementById(this.id).innerHTML =
+        '<img src="./' + this.type + "_" + this.colour + '.png" height="100%">';
+    };
+    this.move = newId => {
+      d.getElementById(this.id).innerHTML = "";
+      this.id = newId;
+      d.getElementById(this.id).innerHTML =
+        '<img src="./' + this.type + "_" + this.colour + '.png" height="100%">';
+    };
+    this.select = function() {
+      var x = [];
+      if (this.colour == "white") {
+        var avMoves = wMoves;
+      } else {
+        var avMoves = bMoves;
+      }
+      let i = 0;
+      do {
+          console.log(avMoves[this.number][i]);
+          
+        x.push(+this.id.substr(1) + +avMoves[this.number][i]);
+        i++;
+      } while (i < avMoves[this.number].length);
+      x.forEach(element => {
+          selectTiles("c" + element);
+          console.log("c"+element);
+          
+      });
+      
+    };
+  }
+}
+
+function selectTiles(id) {
+  if (d.getElementById(id).style.backgroundColor == "rgb(173, 216, 230)") {
+    d.getElementById(id).style = previousColor;
+  } else {
+    var previousColor = d.getElementById(id).style.backgroundColor;
+    d.getElementById(id).style = "background-color:#add8e6;";
+  }
 }
 
 function createBoard() {
-    var i = 1;
-    for (let row = 0; row < 8; row++) {
-        for (let col = 0; col < 8; col++) {
-            var div = document.createElement("div");
-            div.id = "c" + i;
-            if (row % 2 == col % 2) {
-                div.className += "szachy_light";
-            } else {
-                div.className += "szachy_dark";
-            }
-            if (gonnaClear) {
-                div.className += " cb";
-            }
-            div.setAttribute("onclick", "move(this.id)");
-            document
-                .getElementById("restart")
-                .parentNode.insertBefore(div, document.getElementById("restart"));
-            i++;
-            gonnaClear = false;
-        }
-        var gonnaClear = true;
+  var i = 1;
+  for (let row = 1; row <= 8; row++) {
+    for (let col = 1; col <= 8; col++) {
+      var div = d.createElement("div");
+      div.id = "c" + row + col;
+      div.className += "szachy ";
+      if (row % 2 == col % 2) {
+        div.className += "light_tile ";
+      } else {
+        div.className += "dark_tile ";
+      }
+      if (gonnaClear) {
+        div.className += "cb ";
+      }
+      div.setAttribute("onclick", "clickCheck(this.id)");
+      d.getElementById("restart").parentNode.insertBefore(
+        div,
+        d.getElementById("restart")
+      );
+      i++;
+      gonnaClear = false;
     }
+    var gonnaClear = true;
+  }
 }
 
 var pieces = [];
 
 function createPieces() {
-    pieces = [];
-    localPieces();
-    localPieces(48, 8, "black");
+  pieces = [];
+  localPieces();
+  localPieces(7, 0, "black");
 
-    function localPieces(a = 0, b = 0, colour = "white") {
-        var type = "pawn";
-        for (i = 1; i <= 16; i++) {
-            switch (i - b) {
-                case 1:
-                case 8:
-                    type = "rook";
-                    break;
-                case 2:
-                case 7:
-                    type = "knight";
-                    break;
-                case 3:
-                case 6:
-                    type = "bishop";
-                    break;
-                case 4:
-                    type = "queen";
-                    break;
-                case 5:
-                    type = "king";
-                    break;
-                default:
-                    type = "pawn";
-                    break;
-            }
-            pieces[i + a] = new Piece("c" + (i + a), type, colour);
+  function localPieces(a = 0, b = 1, colour = "white") {
+    var type = "pawn";
+    var number = 0;
+    for (row = b; row <= b + 1; row++) {
+      for (col = 1; col <= 8; col++) {
+        switch (row * 10 + col) {
+          case 11:
+          case 18:
+            type = "rook";
+            number = 1;
+            break;
+          case 12:
+          case 17:
+            type = "knight";
+            number = 2;
+            break;
+          case 13:
+          case 16:
+            type = "bishop";
+            number = 3;
+            break;
+          case 14:
+            type = "queen";
+            number = 4;
+            break;
+          case 15:
+            type = "king";
+            number = 5;
+            break;
+          default:
+            type = "pawn";
+            number = 0;
+            break;
         }
+        pieces[(row + a) * 10 + col] = new Piece(
+          "c" + ((row + a) * 10 + col),
+          type,
+          number,
+          colour
+        );
+      }
     }
     for (let i = 0; i < pieces.length; i++) {
-        if (pieces[i] != undefined) {
-            pieces[i].draw();
-        }
+      if (pieces[i] != undefined) {
+        pieces[i].draw();
+      }
     }
+  }
 }
+var freeMoves = false;
+var isClicked;
 
-var clicked;
-
-function move(divId) {
-    if (pieces[divId.substr(1)] != undefined && !clicked) {
-        clicked = true;
-        pieceId = divId.substr(1);
-        pieces[pieceId].select();
-    } else if (pieceId == divId.substr(1)) {
-        clicked = false;
-        pieces[pieceId].select();
-    } else if (clicked) {
-        clicked = false;
-        if (pieceId != divId.substr(1)) {
-            pieces[pieceId].select();
-            pieces[divId.substr(1)] = pieces[pieceId];
-            pieces[divId.substr(1)].move(divId);
-            pieces[pieceId] = undefined;
-        }
-    }
+function clickCheck(clickedTile) {
+  if (pieces[clickedTile.substr(1)] != undefined && !isClicked) {
+    isClicked = true;
+    indexOfPiece = clickedTile.substr(1);
+    pieces[indexOfPiece].select();
+  } else if (indexOfPiece == clickedTile.substr(1)) {
+    isClicked = false;
+    pieces[indexOfPiece].select();
+  } else if (isClicked) {
+    isClicked = false;
+    move(indexOfPiece, clickedTile);
+  }
 }
-
+function move(indexOfPiece, clickedTile) {
+  if (
+    document.getElementById(clickedTile).style.backgroundColor !=
+      "rgb(173, 216, 230)" &&
+    !freeMoves
+  ) {
+    isClicked = false;
+    pieces[indexOfPiece].select();
+  } else if (indexOfPiece != clickedTile.substr(1)) {
+    pieces[indexOfPiece].select();
+    pieces[clickedTile.substr(1)] = pieces[indexOfPiece];
+    pieces[clickedTile.substr(1)].move(clickedTile);
+    pieces[indexOfPiece] = undefined;
+  }
+}
 {
-    createBoard();
-    createPieces();
+  createBoard();
+  createPieces();
 }
