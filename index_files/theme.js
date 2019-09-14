@@ -1,21 +1,14 @@
-var general_color = "#def2f1";
-var win_color = "#ff8064";
-var dark = 0;
+var dark = false;
 
 function Theme() {
-  if (dark == 0) {
+  if (dark) {
     changeCSS("index_files/dark.css", 0);
-    general_color = "#616161";
-    dark = 1;
   } else {
     changeCSS("index_files/light.css", 0);
-    general_color = "#def2f1";
-    dark = 0;
   }
-  for (i = 9; i > 0; i--) {
-    document.getElementById("d" + i).style.backgroundColor = general_color;
-  }
+  dark = !dark;
 }
+
 function changeCSS(cssFile, cssLinkIndex) {
   var oldlink = document.getElementsByTagName("link").item(cssLinkIndex);
 
@@ -31,7 +24,7 @@ function changeCSS(cssFile, cssLinkIndex) {
 }
 
 var prevScrollpos = window.pageYOffset;
-window.onscroll = function() {
+window.onscroll = function () {
   var currentScrollPos = window.pageYOffset;
   if (prevScrollpos > currentScrollPos) {
     document.getElementById("sticky").style.bottom = "0";

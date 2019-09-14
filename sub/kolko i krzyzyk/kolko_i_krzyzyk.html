@@ -4,7 +4,7 @@
 <head>
     <title>Kolko i Krzyzyk</title>
     <meta charset="utf-8">
-    <link rel="stylesheet" href="../../index_files\style_light.css">
+    <link rel="stylesheet" href="../../index_files\style.css">
     <script type="text/javascript" src="../../index_files\theme.js"></script>
 </head>
 
@@ -21,6 +21,8 @@
         <div class=kafle id="restart" onclick="restart()">RESET
         </div>
         <script>
+            var general_color = "#fff";
+            var win_color = "red";
             // tworzenie pol do gry
             for (var i = 1; i < 10; i++) {
                 var div = document.createElement("div");
