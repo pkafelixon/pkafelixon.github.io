@@ -20,11 +20,6 @@ body {
   width: 60px;
 }
 
-/* .theme {
-  color: var(--main-fg-colour);
-  background-color: var(--main-bg-colour);
-} */
-
 #sticky {
   width: 100%;
   position: fixed;
@@ -142,6 +137,19 @@ a {
   float: left;
   background-color: var(--main-bg-colour);
 }
+/* szachy */
+.szachy {
+  color: var(--szafy-fg-colour);
+  position: relative;
+  height: 8vw;
+  /* border: solid lightgrey 1px; */
+  width: 8vw;
+  float: left;
+  background-color: var(--szafy-bg-colour);
+  font-size: 4.5vw;
+}
+
+/* //szachy// */
 
 @media screen and (max-width: 71em) {
   #ttt {
