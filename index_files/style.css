@@ -138,15 +138,26 @@ a {
   background-color: var(--main-bg-colour);
 }
 /* szachy */
-.szachy {
+.szachy_dark {
   color: var(--szafy-fg-colour);
   position: relative;
+  background-color: #582d1b;
   height: 8vw;
-  /* border: solid lightgrey 1px; */
   width: 8vw;
   float: left;
-  background-color: var(--szafy-bg-colour);
   font-size: 4.5vw;
+}
+.szachy_light {
+  color: var(--szafy-fg-colour);
+  background-color: rgb(246, 221, 172);
+  position: relative;
+  height: 8vw;
+  width: 8vw;
+  float: left;
+  font-size: 4.5vw;
+}
+.cb{
+  clear: both;
 }
 
 /* //szachy// */
