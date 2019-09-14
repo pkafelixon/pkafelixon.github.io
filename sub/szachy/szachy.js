@@ -7,7 +7,7 @@ class Piece {
             document.getElementById(this.id).innerHTML =
                 '<img src="./' + this.type + "_" + this.colour + '.png" height="100%">';
         };
-        this.move = function (newId) {
+        this.move = newId => {
             document.getElementById(this.id).innerHTML = "";
             this.id = newId;
             document.getElementById(this.id).innerHTML =
@@ -23,7 +23,6 @@ class Piece {
                 var previousColor = document.getElementById(this.id).style
                     .backgroundColor;
                 document.getElementById(this.id).style = "background-color:#add8e6;";
-                
             }
         };
     }
@@ -39,7 +38,8 @@ function createBoard() {
                 div.className += "szachy_light";
             } else {
                 div.className += "szachy_dark";
-            }if (gonnaClear) {
+            }
+            if (gonnaClear) {
                 div.className += " cb";
             }
             div.setAttribute("onclick", "move(this.id)");
@@ -89,10 +89,6 @@ function createPieces() {
             pieces[i + a] = new Piece("c" + (i + a), type, colour);
         }
     }
-    console.log(pieces);
-}
-
-function main() {
     for (let i = 0; i < pieces.length; i++) {
         if (pieces[i] != undefined) {
             pieces[i].draw();
@@ -103,29 +99,25 @@ function main() {
 var clicked;
 
 function move(divId) {
-    empty = "empty";
-    if (clicked) {
+    if (pieces[divId.substr(1)] != undefined && !clicked) {
+        clicked = true;
+        pieceId = divId.substr(1);
+        pieces[pieceId].select();
+    } else if (pieceId == divId.substr(1)) {
+        clicked = false;
+        pieces[pieceId].select();
+    } else if (clicked) {
         clicked = false;
         if (pieceId != divId.substr(1)) {
             pieces[pieceId].select();
             pieces[divId.substr(1)] = pieces[pieceId];
             pieces[divId.substr(1)].move(divId);
-            pieces[pieceId] = empty;
+            pieces[pieceId] = undefined;
         }
-    } else if (
-        pieces[divId.substr(1)] != empty &&
-        pieces[divId.substr(1)] != undefined
-    ) {
-        clicked = true;
-        pieceId = divId.substr(1);
-        pieces[pieceId].select();
     }
 }
 
 {
-    createBoard
-();
-    createPieces
-();
-    main();
+    createBoard();
+    createPieces();
 }
