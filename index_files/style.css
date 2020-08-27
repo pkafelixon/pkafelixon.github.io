@@ -6,6 +6,9 @@ body {
   background-color: var(--body-bg-colour);
   font-family: "Roboto", sans-serif;
   margin: 0;
+  height: 100vh;
+  display: grid;
+  place-items: center;
 }
 
 #color_changer {
@@ -32,6 +35,7 @@ body {
   color: var(--main-fg-colour);
   background-color: var(--main-bg-colour);
   transition: bottom 0.3s;
+  height: 40px
 }
 
 #f_left {
@@ -59,74 +63,32 @@ a {
 
 /* tictactoe */
 
-.kafle {
-  color: var(--kafle-fg-colour);
-  position: relative;
-  margin: 0.5vw;
+.ttt div {
   box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14),
     0 3px 1px -2px rgba(0, 0, 0, 0.12), 0 1px 5px 0 rgba(0, 0, 0, 0.2);
-  height: 8vw;
   border-radius: 20px;
-  width: 8vw;
-  float: left;
   background-color: var(--kafle-bg-colour);
+  margin: 0.3vw;
+  padding: 2px;
+  display: grid;
+}
+
+.ttt #game {
+  grid-template-columns: 8vw 8vw 8vw;
+  grid-template-rows: 8vw 8vw 8vw; 
+  justify-content: space-evenly;
+  align-content: space-evenly;    
+}
+
+.ttt {
+  display: grid;
   font-size: 4.5vw;
-}
-
-#d1,
-#d4,
-#d7 {
-  clear: both;
-}
-
-#restart {
-  height: auto;
-  padding: 1vw;
-  width: 24vw;
-  clear: both;
   text-align: center;
   font-weight: 500;
 }
 
-#textbox {
-  background-color: var(--kafle-bg-colour);
-  height: 5vw;
-  padding: 1vw;
-  width: 24vw;
-  text-align: center;
-  font-weight: 500;
-}
-
-.b_kafle {
-  font-size: 4.5vw;
-  background-color: var(--kafle-bg-colour);
-  padding: 0;
-  width: 12vw;
-  border-style: none;
-  text-align: center;
-  display: inline-block;
-  font-weight: 400;
-}
-
-#b1 {
-  border-right-style: solid;
-  border-color: var(--main-fg-colour);
-  border-radius: 20px 0 0 20px;
-  float: left;
-}
-
-#b2 {
-  float: right;
-  border-radius: 0 20px 20px 0;
-}
-
-#ttt {
-  padding: 3.5vw 35vw 0 35vw;
-}
-
-#pole {
-  height: 8vw;
-  width: 8vw;
+.ttt img{
+  width: 100%;
 }
 
 /* //tictactoe// */
@@ -162,9 +124,9 @@ a {
 }
 
 /* //szachy// */
-
+/* 
 @media screen and (max-width: 71em) {
-  #ttt {
+  .ttt {
     padding: 8vw;
   }
 
@@ -196,4 +158,4 @@ a {
     font-size: 13.5vw;
     width: 36vw;
   }
-}
+} */
