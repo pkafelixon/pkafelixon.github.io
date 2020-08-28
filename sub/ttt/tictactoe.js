@@ -1,5 +1,5 @@
 var general_color = "#fff";
-var win_color = "#0d891c";
+var win_color = "var(--body-bg-colour)";
 var combinations = [
   [0, 3, 6],
   [1, 4, 7],

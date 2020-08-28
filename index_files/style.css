@@ -24,18 +24,21 @@ body {
 }
 
 #sticky {
-  width: 100%;
   position: fixed;
   text-align: center;
-  font-size: 200%;
-  bottom: 0%;
-  box-shadow: 0 -2px 4px 1px rgba(0, 0, 0, 0.14);
-  padding: 15px 15px 15px 0;
-  text-indent: 20px;
+  top: 0%;
+  box-shadow: rgba(0, 0, 0, 0.14) 0px 2px 4px 1px;
+  padding: 15px;
   color: var(--main-fg-colour);
   background-color: var(--main-bg-colour);
-  transition: bottom 0.3s;
-  height: 40px
+  transition: bottom 0.3s ease 0s;
+  height: 40px;
+  display: grid;
+  grid-template-columns: auto auto;
+  grid-template-rows: auto;
+  justify-content: space-between;
+  right: 0px;
+  left: 0px;
 }
 
 #f_left {
@@ -56,7 +59,7 @@ a {
   background-color: var(--main-bg-colour);
   box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14),
     0 3px 1px -2px rgba(0, 0, 0, 0.12), 0 1px 5px 0 rgba(0, 0, 0, 0.2);
-  margin: 1.5% 12% 1.5% 12%;
+  margin: 85px 16% 1.5% 16%;
   padding: 40px;
   text-indent: 20px;
 }
@@ -67,7 +70,7 @@ a {
   box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14),
     0 3px 1px -2px rgba(0, 0, 0, 0.12), 0 1px 5px 0 rgba(0, 0, 0, 0.2);
   border-radius: 20px;
-  background-color: var(--kafle-bg-colour);
+  background-color: var(--main-bg-colour);
   margin: 0.3vw;
   padding: 2px;
   display: grid;
@@ -75,9 +78,9 @@ a {
 
 .ttt #game {
   grid-template-columns: 8vw 8vw 8vw;
-  grid-template-rows: 8vw 8vw 8vw; 
+  grid-template-rows: 8vw 8vw 8vw;
   justify-content: space-evenly;
-  align-content: space-evenly;    
+  align-content: space-evenly;
 }
 
 .ttt {
@@ -87,7 +90,7 @@ a {
   font-weight: 500;
 }
 
-.ttt img{
+.ttt img {
   width: 100%;
 }
 
@@ -125,57 +128,58 @@ a {
 
 /* //szachy// */
 
-.navbar {
-  overflow: hidden;
-  background-color: #333;
-}
+/* .navbar { */
+/* overflow: hidden; */
+/* background-color: #333; */
+/* } */
 
-.navbar a {
-  float: left;
-  font-size: 16px;
-  color: white;
+#sticky a {
+  /* float: left; */
+  font-size: 2em;
+  /* color: white; */
   text-align: center;
-  padding: 14px 16px;
-  text-decoration: none;
+  /* text-decoration: none; */
 }
 
-.dropdown {
-  float: left;
-  overflow: hidden;
-}
+/* .dropdown { */
+/* float: left; */
+/* overflow: hidden; */
+/* } */
 
 .dropdown .dropbtn {
   cursor: pointer;
-  font-size: 16px;  
+  font-size: 2em;
   border: none;
   outline: none;
-  color: white;
-  padding: 14px 16px;
+  /* color: white; */
+  padding-right: 15px;
   background-color: inherit;
   font-family: inherit;
-  margin: 0;
+  /* margin: 0; */
 }
 
-.navbar a:hover, .dropdown:hover .dropbtn, .dropbtn:focus {
+/* .navbar a:hover,
+.dropdown:hover .dropbtn,
+.dropbtn:focus {
   background-color: #666;
-}
+} */
 
 .dropdown-content {
   display: none;
-  position: absolute;
+  /* position: absolute; */
   background-color: #f9f9f9;
-  min-width: 160px;
-  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  /* min-width: 160px; */
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
   z-index: 1;
 }
 
 .dropdown-content a {
-  float: none;
-  color: black;
+  /* float: none; */
+  /* color: black; */
   padding: 12px 16px;
-  text-decoration: none;
+  /* text-decoration: none; */
   display: block;
-  text-align: left;
+  /* text-align: left; */
 }
 
 .dropdown-content a:hover {
