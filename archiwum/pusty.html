@@ -1,44 +1,48 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="pl">
-
-<head>
+  <head>
     <title>pusty</title>
-    <meta charset="utf-8">
-    <link rel="stylesheet" href="./index_files/style_light.css">
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="./index_files/style_light.css" />
     <script type="text/javascript" src="./index_files/theme.js"></script>
-</head>
+  </head>
 
-<body>
-    <div id="color_changer" onclick="Theme()">
-    </div>
+  <body>
+    <div id="color_changer" onclick="Theme()"></div>
     <header id="sticky" class="theme">
-        <nav style="height:40px; ">
-            <a id="f_left" href="./index.html">Kafelixon</a>
-            <a href="./ttt_v0.10.html" id="f_right">XO</a>
-        </nav>
+      <nav style="height: 40px">
+        <a id="f_left" href="./index.html">Kafelixon</a>
+        <a href="./ttt_v0.10.html" id="f_right">XO</a>
+      </nav>
     </header>
-    <div id="container" style="padding:70px;">
-        <script>
-            var width = (parent.innerWidth / 10);
-            var sum = (parent.innerHeight / 10) * width;
+    <div id="container" style="padding: 70px">
+      <script>
+        var width = parent.innerWidth / 10;
+        var sum = (parent.innerHeight / 10) * width;
 
-            for (var i = 0; i < sum; i++) {
-                var div = document.createElement("div");
-                div.className = "pixele";
-                div.id = "p" + i;
-                div.setAttribute("onmouseenter", "kolor(this.id)")
-               document.getElementById("container").appendChild(div);
-            }
+        for (var i = 0; i < sum; i++) {
+          var div = document.createElement('div');
+          div.className = 'pixele';
+          div.id = 'p' + i;
+          div.setAttribute('onmouseenter', 'kolor(this.id)');
+          document.getElementById('container').appendChild(div);
+        }
 
-            function kolor(id) {
-                var losowy = "rgb(" + Math.floor(Math.random() * 255) + ", " + Math.floor(Math.random() * 255) + ", " +Math.floor(Math.random() * 255) + ")";
-               document.getElementById(id).style.backgroundColor = losowy;
-            }
-            for (var i = width - 16; i < sum; i += width - 16) {
-               document.getElementById("p" + i).style.clear = "both";
-            }
-        </script>
+        function kolor(id) {
+          var losowy =
+            'rgb(' +
+            Math.floor(Math.random() * 255) +
+            ', ' +
+            Math.floor(Math.random() * 255) +
+            ', ' +
+            Math.floor(Math.random() * 255) +
+            ')';
+          document.getElementById(id).style.backgroundColor = losowy;
+        }
+        for (var i = width - 16; i < sum; i += width - 16) {
+          document.getElementById('p' + i).style.clear = 'both';
+        }
+      </script>
     </div>
-</body>
-
+  </body>
 </html>
